@@ -16,7 +16,7 @@ With everything else, I've uploaded also a 128x128 icon for the index of the pro
 
 Last two things and I'll not annoy you anymore :smile:.
 - Tested on Ubuntu 15.10: the script will restart _lightdm_ once finished.
-- You may need to change script permissions before starting it. Please, locate inside script folder and do
+- You may need to change script permissions before starting it. Please, move to the script folder and type in terminal window:
 
         chmod 777 installTelegram.sh
 
