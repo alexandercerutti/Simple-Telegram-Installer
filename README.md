@@ -21,3 +21,7 @@ Last two things and I'll not annoy you anymore :smile:.
         chmod 777 installTelegram.sh
 
 Thank you for using my script!
+
+######Script screeshot:
+
+![screen](http://i.imgur.com/mBmej8y.png)
