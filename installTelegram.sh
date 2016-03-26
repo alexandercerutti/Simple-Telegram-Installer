@@ -1,6 +1,7 @@
 #!/bin/sh
 #telegram installer
 FILE="$1";
+dir=/usr/local/bin;
 clear; #cleans the console
 echo "\n******************************************************";
 echo "\n  Welcome into Simple Telegram Installer";
@@ -34,23 +35,17 @@ case $m in
     else
         echo "telegram128.png is missing. You will not see any icon.";
     fi
-    if [ ! -d /usr/local/bin/ ]; then
+    if [ ! -d $dir ]; then
+        dir=/opt;
         echo "There's a problem with the folder: /usr/local/bin/ seems not to exists. Your application will be located in /opt/";
-        sudo mv -i telegram /opt/;
-    else
-        sudo mv -i telegram /usr/local/bin/;
     fi
+    sudo mv -i telegram $dir/;
 
     #creating index file
     if [ ! -f "/usr/share/applications/telegram.desktop" ]; then
-        echo "Moving index file...";
-        if [ ! -f /usr/local/bin ]; then
-            #using the pipeline to bypass the
-            printf "%s\n" "[Desktop Entry]" "Encoding=UTF-8" "Name=Telegram" "Exec=/opt/telegram/Telegram" "Icon=/opt/telegram/telegram128.png" "Type=Application" "Categories=Network" "Comment=Telegram" "[Desktop Action Gallery]" "Exec=/opt/telegram/Telegram" "Name=Telegram" >| telegram.desktop;
-        else
-            printf "%s\n" "[Desktop Entry]" "Encoding=UTF-8" "Name=Telegram" "Exec=/usr/local/bin/telegram/Telegram" "Icon=/usr/local/bin/telegram/telegram128.png" "Type=Application" "Categories=Network" "Comment=Telegram" "[Desktop Action Gallery]" "Exec=/usr/local/bin/telegram/Telegram" "Name=Telegram" >| telegram.desktop;
-        fi
-        cp telegram.desktop /usr/share/applications/;
+        echo "Creating and moving telegram.desktop file...";
+        printf "%s\n" "[Desktop Entry]" "Encoding=UTF-8" "Name=Telegram" "Exec=$dir/telegram/Telegram" "Icon=$dir/telegram/telegram128.png" "Type=Application" "Categories=Network" "Comment=Telegram" "[Desktop Action Gallery]" "Exec=$dir/telegram/Telegram" "Name=Telegram" >| telegram.desktop;
+        mv telegram.desktop /usr/share/applications/;
     else
         echo "telegram.desktop already existing! The file doesn't need to be replaced.";
     fi
@@ -59,7 +54,6 @@ case $m in
     if [ x in [yY][sS] ]; then
         rm -rf telegram.tar.xz;
         rm telegram128.png;
-        rm telegram.desktop;
     fi
 
     echo "Ending...\nThank you. Rebooting the UI";
