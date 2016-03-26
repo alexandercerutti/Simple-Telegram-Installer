@@ -24,6 +24,6 @@ Last two things and I'll not annoy you anymore :smile:.
 
 Thank you for using my script!
 
-######Script screenshot *:
+######Script screenshot:
 
 ![screen](http://i.imgur.com/mBmej8y.png)
