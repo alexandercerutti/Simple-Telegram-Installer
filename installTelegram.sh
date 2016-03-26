@@ -46,7 +46,9 @@ case $m in
         echo "Moving index file...";
         if [ ! -f /usr/local/bin ]; then
             #using the pipeline to bypass the
-            printf "%s\n" "[Desktop Entry]" "Encoding=UTF-8" "Name=Telegram" "Exec=/opt/telegram/Telegram" "Icon=/usr/local/bin/telegram/telegram128.png" "Type=Application" "Categories=Network" "Comment=Telegram" "[Desktop Action Gallery]" "Exec=/usr/local/bin/telegram/Telegram" "Name=Telegram" >| telegram.desktop;
+            printf "%s\n" "[Desktop Entry]" "Encoding=UTF-8" "Name=Telegram" "Exec=/opt/telegram/Telegram" "Icon=/opt/telegram/telegram128.png" "Type=Application" "Categories=Network" "Comment=Telegram" "[Desktop Action Gallery]" "Exec=/opt/telegram/Telegram" "Name=Telegram" >| telegram.desktop;
+        else
+            printf "%s\n" "[Desktop Entry]" "Encoding=UTF-8" "Name=Telegram" "Exec=/usr/local/bin/telegram/Telegram" "Icon=/usr/local/bin/telegram/telegram128.png" "Type=Application" "Categories=Network" "Comment=Telegram" "[Desktop Action Gallery]" "Exec=/usr/local/bin/telegram/Telegram" "Name=Telegram" >| telegram.desktop;
         fi
         cp telegram.desktop /usr/share/applications/;
     else
