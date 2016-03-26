@@ -1,10 +1,10 @@
 Telegram-Installer
 ======
-Telegram Installer for linux, by eXander
+A simple Telegram installer for linux
 
 ####Description
 
-At the current version (0.9.33), Telegram provides only two executable files (Telegram itself and its updater) and no installer, like many other linux softwares. I decided to create this installer in bash for Linux to download, extract and find Telegram (if you already downloaded it). You can make the script try to find the already downloaded version by typing the name of the _archive_ (.tar.xz) straight after the script name, like this:
+At the current version (0.9.33), Telegram provides only two executable files (Telegram itself and its updater) and no installer, like many other linux softwares. So, I decided to create this installer in bash for Linux to download, extract and find Telegram (if you already downloaded it). You can make the script try to find the already downloaded version by typing the name of the _archive_ (.tar.xz) straight after the script name, like this:
 
         ./installTelegram.sh telegram.tar.xz
 
