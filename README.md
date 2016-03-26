@@ -1,4 +1,4 @@
-Telegram-Installer
+Simple Telegram Installer
 ======
 A simple Telegram installer for linux
 
