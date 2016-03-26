@@ -13,7 +13,7 @@ echo "\n******************************************************\n";
 read -p "  Are you ready to begin the installation? [y/n] `echo '\n>> '`" m;
 case $m in
     [yY]|[sS])
-    #Download and/or extracting the file and move o
+    # Downloading or seeking for the the file / folder
     if [ -z "$FILE" -o ! -f $FILE ]; then
         if [ ! -d telegram -a ! -d Telegram ]; then
             echo "I'm downloading Telegram... Download speed may vary depending by your connection speed.\nDO NOT DELETE ANY NEW FILE ON DESKTOP. Press CTRL-Z to abort.\n";
