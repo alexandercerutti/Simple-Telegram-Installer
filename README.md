@@ -10,7 +10,7 @@ At the current version (0.9.33), Telegram provides only two executable files (Te
 
 If file control fails (not passed as argument and/or not found), the script looks for _telegram_ and _Telegram_ folders in its path. Otherwise, it tries to download and extract Telegram archive.
 Once found the extracted folder, the script will move it to **/usr/local/bin/** or **/opt/** (if the first cannot be found).
-On Linux, software indexing it done with **.desktop** files. The script will create and move the file _telegram.desktop_ to **/usr/share/applications/**.
+On Linux, software indexing is done with **.desktop** files. The script will create and move the file _telegram.desktop_ to **/usr/share/applications/**.
 
 I also uploaded a 128x128 icon for Telegram inside the search menu (like Ubuntu's one).
 
