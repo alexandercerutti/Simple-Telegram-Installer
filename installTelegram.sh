@@ -10,14 +10,15 @@ echo "  This program can both download Telegram and read it\n  from an archive (
 /bin/echo -e "  To link a file, abort this actual session by answering\n  'no' to the following question and then start the program\n  again like this:\n\n\t$ \e[1m./installtelegram.sh yourfile.tar.xz.\e[0m";
 echo "\n  At the end of the installation, Ubuntu UI will be\n  restarted to update everything.";
 echo "\n******************************************************\n";
-read -p "  Are you ready to begin the installation? [y/n] `echo '\n>> '`" m;
+echo -n "  Are you ready to begin the installation? [y/n] >> ";
+read m;
 case $m in
     [yY]|[sS])
     # Downloading or seeking for the the file / folder
     if [ -z "$FILE" -o ! -f $FILE ]; then
         if [ ! -d telegram -a ! -d Telegram ]; then
-            echo "I'm downloading Telegram... Download speed may vary depending by your connection speed.\nDO NOT DELETE ANY NEW FILE ON DESKTOP. Press CTRL-Z to abort.\n";
-            echo "\nPlease, stand behind the yellow line.";
+            echo "  I'm downloading Telegram... Download speed may vary depending by your connection speed.\n  DO NOT DELETE ANY NEW FILE ON DESKTOP. Press CTRL-Z to abort.\n";
+            echo "\n  Please, stand behind the yellow line.";
             #using /bin/echo to not use Dash's echo command. This lets me style the text
             /bin/echo -e "\e[93m. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\e[0m";
             /bin/echo -e "\e[103m\t\t\t\t\t\t\t\t\t\t \e[0m \n";
@@ -50,14 +51,14 @@ case $m in
         echo "telegram.desktop already existing! The file doesn't need to be replaced.";
     fi
 
-    read -p "Want to delete following 3 files? [y/n] telegram.tar.xz , telegram icon , telegram index file " x;
-    if [ x in [yY][sS] ]; then
+    echo -n "Want to delete following 3 files? telegram.tar.xz, telegram icon, telegram index file [y/n]";
+    read m;
+    if [ m in [yY][sS] ]; then
         rm -rf telegram.tar.xz;
         rm telegram128.png;
     fi
 
-    echo "Ending...\nThank you. Rebooting the UI";
-    sudo service lightdm restart;
+    echo "Ending...\nThank you to have used Simple Telegram Installer.";
     ;;
 *)
     echo "Okay, see you!";
