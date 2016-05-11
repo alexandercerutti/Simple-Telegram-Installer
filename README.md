@@ -14,9 +14,7 @@ On Linux, software indexing is done with **.desktop** files. The script will cre
 
 I also uploaded a 128x128 icon for Telegram inside the search menu (like Ubuntu's one).
 
-Last two things and I'll not annoy you anymore. :smile:
-- Tested on Ubuntu 15.10: the script will restart _lightdm_ once finished.
-- You may need to change script permissions before starting it. Please, move to the script folder and type in terminal window:
+The last thing and I'll not annoy you anymore. :smile: You may need to change script permissions before starting it. Please, move to the script folder and type in terminal window:
 
         chmod 777 installTelegram.sh
 
