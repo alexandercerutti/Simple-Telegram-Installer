@@ -8,7 +8,6 @@ echo "\n  Welcome into Simple Telegram Installer";
 echo "  This program can both download Telegram and read it\n  from an archive (tar.xz format).\n"
 #using /bin/echo to not use Dash's echo command. This lets me style the text
 /bin/echo -e "  To link a file, abort this actual session by answering\n  'no' to the following question and then start the program\n  again like this:\n\n\t$ \e[1m./installtelegram.sh yourfile.tar.xz.\e[0m";
-echo "\n  At the end of the installation, Ubuntu UI will be\n  restarted to update everything.";
 echo "\n******************************************************\n";
 echo -n "  Are you ready to begin the installation? [y/n] >> ";
 read m;
