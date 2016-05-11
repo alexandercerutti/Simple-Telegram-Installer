@@ -1,6 +1,6 @@
 Simple Telegram Installer
 ======
-A simple Telegram installer for linux
+A simple Telegram installer for linux.
 
 ####Description
 
