@@ -52,7 +52,7 @@ case $m in
 
     echo -n "Want to delete following 3 files? telegram.tar.xz, telegram icon, telegram index file [y/n]";
     read m;
-    if [ m in [yY][sS] ]; then
+    if echo $m | grep "^[yYsS]"; then
         rm -rf telegram.tar.xz;
         rm telegram128.png;
     fi
