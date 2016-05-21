@@ -126,56 +126,58 @@ case $m in
             tar xfJ telegram.tar.xz;
         ;;
     esac
-    #Renaming the folder to lower case.
-    if [ -d Telegram ]; then
-        sudo mv Telegram telegram;
-    fi
-    #Moving the icon
-    if [ -f "telegram128.png" ]; then
-        sudo cp telegram128.png telegram/;
-    else
-        echo "telegram128.png is missing. You will not see any icon.";
-    fi
-    #Valid folder control (for /usr/local/bin)
-    if [ ! -d $dir ]; then
-        echo "There's a problem with the folder: /usr/local/bin/ seems not to exists. Your application will be located in /opt/";
-        dir=/opt;
-    fi
-    #removing older telegram folder in $dir.
-    if [ -d $dir/telegram ]; then
-        sudo rm -rf $dir/telegram;
-    fi
-    #coping the new folder and deleting it from the download place.
-    sudo cp -af telegram $dir/;
-    sudo rm -rf telegram;
-    #creating index file
-    if [ ! -f "/usr/share/applications/telegram.desktop" ]; then
-        echo "  Creating and moving telegram.desktop file...";
-        printf "%s\n" "[Desktop Entry]" "Encoding=UTF-8" "Name=Telegram" "Exec=$dir/telegram/Telegram" "Icon=$dir/telegram/telegram128.png" "Type=Application" "Categories=Network" "Comment=Telegram" "[Desktop Action Gallery]" "Exec=$dir/telegram/Telegram" "Name=Telegram" >| telegram.desktop;
-        mv telegram.desktop /usr/share/applications/;
-    else
-        echo "  telegram.desktop already existing! The file doesn't need to be replaced.";
-    fi
-
-    #Waste deletion control
-    if [ -f telegram.tar.xz ]; then
-        echo -n "  Would you delete the downloaded file (telegram.tar.xz)? [y/n] ";
-        read m;
-        if echo $m | grep "^[yYsS]" >>/dev/null 2>/dev/null; then
-            rm -rf telegram.tar.xz;
+    if [ $METHOD != "snap" ]; then
+        #Renaming the folder to lower case.
+        if [ -d Telegram ]; then
+            sudo mv Telegram telegram;
         fi
-    fi
-    if [ -d Telegram ] || [ -d telegram ]; then
-        echo -n "  Would you delete the telegram folder? [y/n] ";
-        read m;
-        if echo $m | grep "^[yYsS]" >>/dev/null 2>/dev/null; then
-            rm -rf telegram;
-            rm -rf Telegram;
+        #Moving the icon
+        if [ -f "telegram128.png" ]; then
+            sudo cp telegram128.png telegram/;
+        else
+            echo "telegram128.png is missing. You will not see any icon.";
+        fi
+        #Valid folder control (for /usr/local/bin)
+        if [ ! -d $dir ]; then
+            echo "There's a problem with the folder: /usr/local/bin/ seems not to exists. Your application will be located in /opt/";
+            dir=/opt;
+        fi
+        #removing older telegram folder in $dir.
+        if [ -d $dir/telegram ]; then
+            sudo rm -rf $dir/telegram;
+        fi
+        #coping the new folder and deleting it from the download place.
+        sudo cp -af telegram $dir/;
+        sudo rm -rf telegram;
+        #creating index file
+        if [ ! -f "/usr/share/applications/telegram.desktop" ]; then
+            echo "  Creating and moving telegram.desktop file...";
+            printf "%s\n" "[Desktop Entry]" "Encoding=UTF-8" "Name=Telegram" "Exec=$dir/telegram/Telegram" "Icon=$dir/telegram/telegram128.png" "Type=Application" "Categories=Network" "Comment=Telegram" "[Desktop Action Gallery]" "Exec=$dir/telegram/Telegram" "Name=Telegram" >| telegram.desktop;
+            mv telegram.desktop /usr/share/applications/;
+        else
+            echo "  telegram.desktop already existing! The file doesn't need to be replaced.";
+        fi
+
+        #Waste deletion control
+        if [ -f telegram.tar.xz ]; then
+            echo -n "  Would you delete the downloaded file (telegram.tar.xz)? [y/n] ";
+            read m;
+            if echo $m | grep "^[yYsS]" >>/dev/null 2>/dev/null; then
+                rm -rf telegram.tar.xz;
+            fi
+        fi
+        if [ -d Telegram ] || [ -d telegram ]; then
+            echo -n "  Would you delete the telegram folder? [y/n] ";
+            read m;
+            if echo $m | grep "^[yYsS]" >>/dev/null 2>/dev/null; then
+                rm -rf telegram;
+                rm -rf Telegram;
+            fi
         fi
     fi
     echo "  Ending...\n  Thank you to have used Simple Telegram Installer.\n\n\n";
     ;;
-*)
-    echo "  Okay, see you!";
-    ;;
+    *)
+        echo "  Okay, see you!";
+        ;;
 esac
