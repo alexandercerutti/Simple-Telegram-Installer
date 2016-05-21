@@ -12,7 +12,7 @@ Auto-detection will try automatically to retrieve Telegram (in order) from _**sc
 
 The _script argument_ is an archive (.tar.xz) placed somewhere in your pc. To start with it, you will need to start the script like this:
 
-    ./installTelegram.sh --auto <path-to-archive>.tar.xz
+        ./installTelegram.sh --auto <path-to-archive>.tar.xz
 
 The _telegram.tar.xz archive_ is an archive already downloaded by telegram by the website of via the script.
 The _extracted folder_ is a folder extracted from telegram.tar.xz, called **telegram** or **Telegram**.
@@ -21,11 +21,11 @@ _download from the web_, will download telegram from the official website.
 #####Manual-detection
 Manual-detection will lists you all the available ways to install Telegram (like auto-detection method). Manual-detection has **--manual** suffix.
 
-    ./installTelegram.sh --manual
+        ./installTelegram.sh --manual
 
 The _script argument_ is an archive (tar.xz) placed somewhere in your pc. To start with it, you will need to start the script like this:
 
-    ./installTelegram.sh --manual <path-to-archive>.tar.xz
+        ./installTelegram.sh --manual <path-to-archive>.tar.xz
 
 If an option is not available, it will be not displayed. Each option has a 'keyword' with which you can start each of them.
 For the other ways, please see _auto-detection_ options.
