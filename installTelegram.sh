@@ -74,7 +74,7 @@ case $m in
             if [ ! -z "$FILE" ] && [ -f $FILE ]; then
                 tar xfJ $FILE;
             else
-                echo -n "File not found or unreachable. Insert a path or file. The script will be restarted. Write \"abort\" to abort.";
+                echo -n "  File not found or unreachable. Insert a path or file. The script will be restarted. Write \"abort\" to abort.";
                 read $FILE;
                 if [ $FILE == "abort" ]; then
                     exit;
@@ -93,13 +93,13 @@ case $m in
             if [ -f telegram.tar.xz ]; then
                 tar xfJ telegram.tar.xz;
             else
-                echo "telegram.tar.xz archive not found or unreachable. The program will be aborted."
+                echo "  telegram.tar.xz archive not found or unreachable. The program will be aborted."
                 exit;
             fi
         ;;
         folder)
             if [ ! -d telegram ] && [ ! -d Telegram ]; then
-                echo "Telegram and telegram folder not found. The program will be aborted."
+                echo "  Telegram and telegram folder not found. The program will be aborted."
                 exit;
             fi
         ;;
@@ -109,6 +109,9 @@ case $m in
             read m;
             if echo m | grep "^[yYsS]" >>/dev/null 2>/dev/null; then
                 sudo install telegram-sergiusens
+            else
+                echo -n "  Aborted.";
+                exit;
             fi
         else
             echo "  Snap is not installed. The program will be aborted".
