@@ -35,7 +35,7 @@ case $PAR in
         fi
         ;;
     --manual)
-        echo -n "  You have chosen to check manual ways to install Telegram.\n  Write the name written in brackets to choose.\n  You can also abort by typing \"abort\"\n";
+        echo -n "  You have chosen to check manual ways to install Telegram.\n  Write the name written in brackets to choose.\n  Here's the available ways:\n";
         # Fa scegliere la sorgente
         if [ ! -z "$FILE" ] && [ -f $FILE ]; then
             echo "  - Pass an archive as parameter to the script. (args)"
@@ -45,9 +45,6 @@ case $PAR in
         fi
         if [ -d telegram ] || [ -d Telegram ]; then
             echo "  - Install from extracted folder in script directory. (folder)"
-        fi
-        if dpkg -l | grep snapd >>/dev/null 2>/dev/null; then
-            echo "  - Download the last version from snap. (snap)"
         fi
             echo "  - Download the last version from the web. (dw)"
         echo -n ">> ";
@@ -103,19 +100,6 @@ case $m in
                 exit;
             fi
         ;;
-        snap)
-        if dpkg -l | grep snapd >>/dev/null 2>/dev/null; then
-            echo "  At the actual version, snap version have some limitations. Want me to continue anyway? Else the program will be aborted.";
-            read m;
-            if echo m | grep "^[yYsS]" >>/dev/null 2>/dev/null; then
-                sudo install telegram-sergiusens
-            fi
-        else
-            echo "  Snap is not installed. The program will be aborted".
-        fi
-        ;;
-        abort)
-            exit;;
         *)
             echo "  I'm downloading Telegram... Download speed may vary depending by your connection speed.\n  DO NOT DELETE ANY NEW FILE ON DESKTOP. Press CTRL-Z to abort.\n";
             echo "\n  Please, stand behind the yellow line.";
