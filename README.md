@@ -8,7 +8,7 @@ At the current version (0.9.49), Telegram provides only two executable files (Te
 This script offers five ways to install Telegram: auto-detection, manual-detection, file, folder, download.
 
 #####Auto-detection
-Auto-detection will try automatically to retrieve Telegram (in order) from *_script argument_, _telegram.tar.xz archive_, _extracted folder_ , _download from the web_*. Auto-detection has **--auto** suffix.
+Auto-detection will try automatically to retrieve Telegram (in order) from _**script argument**_, _**telegram.tar.xz archive**_, _**extracted folder**_ , _**download from the web**_. Auto-detection has **--auto** suffix.
 
 The _script argument_ is an archive (.tar.xz) placed somewhere in your pc. To start with it, you will need to start the script like this:
 
