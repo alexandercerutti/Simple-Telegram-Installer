@@ -112,6 +112,7 @@ case $m in
             fi
         else
             echo "  Snap is not installed. The program will be aborted".
+            exit;
         fi
         ;;
         abort)
