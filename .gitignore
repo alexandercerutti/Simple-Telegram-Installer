@@ -1,0 +1,6 @@
+*.tar.xz
+*.zip
+*.ini
+.DS_Store
+*.db
+*.sh[~]+
