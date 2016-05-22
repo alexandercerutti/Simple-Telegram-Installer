@@ -105,7 +105,7 @@ case $m in
         ;;
         snap)
         if dpkg -l | grep snapd >>/dev/null 2>/dev/null; then
-            sudo install telegram-sergiusens
+            sudo snap install telegram-sergiusens
         else
             echo "  Snap is not installed. The program will be aborted".
             exit;
