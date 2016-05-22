@@ -7,8 +7,8 @@ A simple Telegram installer for linux.
 At the current version (0.9.49), Telegram provides only two executable files (Telegram itself and its updater) and no installer like many other linux softwares. So, I decided to create this installer in bash for Linux to download, extract and find Telegram (if you already downloaded it).
 This script offers five ways to install Telegram: auto-detection, manual-detection, file, folder, download.
 
-#####Auto-detection
-Auto-detection will try automatically to retrieve Telegram (in order) from _**script argument**_, _**telegram.tar.xz archive**_, _**extracted folder**_ , _**download from the web**_. Auto-detection has **--auto** suffix.
+#####Auto-detection ( **--auto** )
+Auto-detection will try automatically to retrieve Telegram (in order) from _**script argument**_, _**telegram.tar.xz archive**_, _**extracted folder**_ , _**download from the web**_.
 
 The _script argument_ is an archive (.tar.xz) placed somewhere in your pc. To start with it, you will need to start the script like this:
 
@@ -18,8 +18,8 @@ The _telegram.tar.xz archive_ is an archive already downloaded by telegram by th
 The _extracted folder_ is a folder extracted from telegram.tar.xz, called **telegram** or **Telegram**.
 _download from the web_, will download telegram from the official website.
 
-#####Manual-detection
-Manual-detection will lists you all the available ways to install Telegram (like auto-detection method). Manual-detection has **--manual** suffix.
+#####Manual-detection ( **--manual** )
+Manual-detection will lists you all the available ways to install Telegram (like auto-detection method).
 
         ./installTelegram.sh --manual
 
@@ -33,7 +33,7 @@ If an option is not available, it will be not displayed. Each option has a 'keyw
 For the other ways, please see _auto-detection_ options.
 
 
-#####File
+#####File ( **-f** )
 File is a shoutcut to **--auto** _script argument_. It has the suffix **-f**;
 
 
