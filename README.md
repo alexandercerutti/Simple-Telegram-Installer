@@ -23,10 +23,12 @@ Manual-detection will lists you all the available ways to install Telegram (like
 
         ./installTelegram.sh --manual
 
-The _script argument_ is an archive (tar.xz) placed somewhere in your pc. To start with it, you will need to start the script like this:
+This parameter let you also to install Telegram via _**snap**_, the newer Ubuntu _packet manager_, unavailable way in auto-detection mode. This voice will appear only if snap is installed.
+As in auto-detection mode, _script argument_ is an archive (tar.xz) placed somewhere in your pc. To start with it, you will need to start the script like this:
 
         ./installTelegram.sh --manual <path-to-archive>.tar.xz
 
+Passing a file-argument to **--manual**, will still display also the other ways to install Telegram.
 If an option is not available, it will be not displayed. Each option has a 'keyword' with which you can start each of them.
 For the other ways, please see _auto-detection_ options.
 
