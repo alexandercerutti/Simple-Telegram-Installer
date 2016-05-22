@@ -3,4 +3,4 @@
 *.ini
 .DS_Store
 *.db
-*.sh~
+*.sh[~]+
