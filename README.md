@@ -34,7 +34,7 @@ For the other ways, please see _auto-detection_ options.
 
 
 #####File ( **-f** )
-File is a shoutcut to **--auto** _script argument_. It has the suffix **-f**;
+File is a shoutcut to **--auto** _script argument_.
 
 
 #####Folder and download
