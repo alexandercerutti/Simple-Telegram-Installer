@@ -105,7 +105,14 @@ case $m in
         ;;
         snap)
         if dpkg -l | grep snapd >>/dev/null 2>/dev/null; then
-            sudo install telegram-sergiusens
+            echo "  At the actual version, snap version have some limitations. Want me to continue anyway? Else the program will be aborted.";
+            read m;
+            if echo m | grep "^[yYsS]" >>/dev/null 2>/dev/null; then
+                sudo install telegram-sergiusens
+            else
+                echo -n "  Aborted.";
+                exit;
+            fi
         else
             echo "  Snap is not installed. The program will be aborted".
             exit;
