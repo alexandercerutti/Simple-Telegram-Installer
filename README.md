@@ -49,7 +49,9 @@ Thank you for using my script!
 
 ######Script screenshot:
 **--manual**
-![screen](http://i.imgur.com/RAm5okl.png)
+![screen]
+(http://i.imgur.com/RAm5okl.png)
 
 **download no-args**
-![screen](http://i.imgur.com/s8ap6HI.png)
+![screen]
+(http://i.imgur.com/s8ap6Hl.png)
