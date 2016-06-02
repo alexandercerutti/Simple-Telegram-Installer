@@ -14,7 +14,7 @@ The _script argument_ is an archive (.tar.xz) placed somewhere in your pc. To st
 
         ./installTelegram.sh --auto <path-to-archive>.tar.xz
 
-The _telegram.tar.xz archive_ is an archive already downloaded by telegram by the website of via the script.
+_** TEMPORARY DISABLED **_ The _telegram.tar.xz archive_ is an archive already downloaded by telegram by the website of via the script.
 The _extracted folder_ is a folder extracted from telegram.tar.xz, called **telegram** or **Telegram**.
 _download from the web_, will download telegram from the official website.
 
@@ -32,11 +32,6 @@ Passing a file-argument to **--manual**, will still display also the other ways 
 If an option is not available, it will be not displayed. Each option has a 'keyword' with which you can start each of them.
 For the other ways, please see _auto-detection_ options.
 
-
-#####File ( **-f** )
-File is a shoutcut to **--auto** _script argument_.
-
-
 #####Folder and download
 If none of the previous args are passed to the script, the script itself will scan its folder searching telegram folder (_extracted folder_). Else it will download and process the archive from Telegram official website (tdesktop.com/linux);
 
@@ -53,5 +48,8 @@ The last thing and I'll not annoy you anymore. :smile: You may need to change sc
 Thank you for using my script!
 
 ######Script screenshot:
+**--manual**
+![screen](http://i.imgur.com/RAm5okl.png)
 
-![screen](http://i.imgur.com/mBmej8y.png)
+**download no-args**
+![screen](http://i.imgur.com/s8ap6HI.png)
