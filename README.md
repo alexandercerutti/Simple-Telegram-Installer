@@ -33,8 +33,7 @@ If an option is not available, it will be not displayed. Each option has a 'keyw
 For the other ways, please see _auto-detection_ options.
 
 #####Folder and download
-If none of the previous args are passed to the script, the script itself will scan its folder searching telegram folder (_extracted folder_). Else it will download and process the archive from Telegram official website (tdesktop.com/linux);
-
+If none of the previous args are passed to the script, the script itself will scan its folder searching telegram folder (_extracted folder_). Else it will download and process the archive from Telegram official website (tdesktop.com/linux).
 
 Once found the extracted folder, the script will move it to **/usr/local/bin/** or **/opt/** (if the first cannot be found).
 On Linux, software indexing is done with **.desktop** files. The script will create and move the file _telegram.desktop_ to **/usr/share/applications/**.

@@ -17,8 +17,8 @@ bs=$(basename "$0");
 dir=/usr/local/bin;
 clear;
 
-echo "\n******************************************************";
-echo "\n  Welcome into Simple Telegram Installer";
+echo "\n******************************************************\n";
+echo "  Welcome into Simple Telegram Installer";
 echo "  This script will help you to install Telegram for\n  Linux easily. For more details about installation modes,\n  please refer to README.md file or\n  https://github.com/alexandercerutti/Simple-Telegram-Installer.\n  Thank you.\n"
 #using /bin/echo to not use Dash's echo command. This lets me style the text
 /bin/echo -e "  To link a file, abort this actual session by answering\n  'no' (n) to the following question and then pass a filename or path to the script\n  like this:\n\n\t$ \e[1m./installtelegram.sh --auto yourfile.tar.xz.\e[0m";
@@ -32,10 +32,6 @@ case $PAR in
         if [ ! -z "$FILE" ] && [ -f $FILE ]; then
             echo -n "  STI will install telegram from the pointed archive.\n"
             METHOD="args";
-#        elif [ -f telegram.tar.xz ]; then
-#            echo "\n  telegram.tar.xz has been found in the script folder.\n  STI will install from this source."
-#            FILE=telegram.tar.xz;
-#            METHOD="file";
         elif [ -d telegram ] || [ -d Telegram ]; then
             echo "\n  telegram folder has been found in the script folder.\n  STI will install from this source."
             METHOD="folder";
@@ -52,10 +48,6 @@ case $PAR in
         else
             echo -n "  You have chosen to check manual ways to install Telegram.\n  Write the name written in brackets to choose.\n  You can also abort by typing \"abort\"\n";
             echo "  - Specify path to an archive o the archive name itself. (args)"
-#            if [ -f telegram.tar.xz ]; then
-#                echo "  - Install from archive in script directory. (file)"
-#            fi
-        ### *)
             if [ -d telegram ] || [ -d Telegram ]; then
                 echo "  - Install from extracted folder in script directory. (folder)"
             fi
@@ -110,19 +102,6 @@ case $m in
                     fi;
                 fi
             ;;
-#            file)
-                # already downloaded
-                # control if telegram folder already existing and removing it.
-#                if [ -d "$dir/telegram" ]; then
-#                    rm -rf $dir/telegram;
-#                fi
-#                if [ -f telegram.tar.xz ]; then
-#                    tar xfJ telegram.tar.xz;
-#                else
-#                    echo "  telegram.tar.xz archive not found or unreachable. The program will be aborted."
-#                    exit;
-#                fi
-#            ;;
             folder)
                 if [ ! -d telegram ] && [ ! -d Telegram ]; then
                     echo "  Telegram and telegram folder not found. The program will be aborted."
