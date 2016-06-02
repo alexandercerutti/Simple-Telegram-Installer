@@ -50,7 +50,7 @@ Thank you for using my script!
 ######Script screenshot:
 **--manual**
 ![screen]
-(http://i.imgur.com/RAm5okl.png)
+(http://i.imgur.com/RAm5okI.png)
 
 **download no-args**
 ![screen]
