@@ -14,7 +14,7 @@ The _script argument_ is an archive (.tar.xz) placed somewhere in your pc. To st
 
         ./installTelegram.sh --auto <path-to-archive>.tar.xz
 
-_** TEMPORARY DISABLED **_ The _telegram.tar.xz archive_ is an archive already downloaded by telegram by the website of via the script.
+_**TEMPORARY DISABLED**_ The _telegram.tar.xz archive_ is an archive already downloaded by telegram by the website of via the script.
 The _extracted folder_ is a folder extracted from telegram.tar.xz, called **telegram** or **Telegram**.
 _download from the web_, will download telegram from the official website.
 
