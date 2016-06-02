@@ -43,15 +43,13 @@ I also uploaded a 128x128 icon for Telegram inside the search menu (like Ubuntu'
 
 The last thing and I'll not annoy you anymore. :smile: You may need to change script permissions before starting it. Please, move to the script folder and type in terminal window:
 
-        chmod 777 installTelegram.sh
+        chmod u+x installTelegram.sh
 
 Thank you for using my script!
 
 ######Script screenshot:
 **--manual**
-![screen]
-(http://i.imgur.com/RAm5okI.png)
+![screen](https://raw.githubusercontent.com/alexandercerutti/Simple-Telegram-Installer/master/imgs/manual.png)
 
 **download no-args**
-![screen]
-(http://i.imgur.com/s8ap6Hl.png)
+![screen](https://raw.githubusercontent.com/alexandercerutti/Simple-Telegram-Installer/master/imgs/no_args_dw.png)
