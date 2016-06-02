@@ -13,7 +13,6 @@ else
     FILE="$2"
 fi
 
-bs=$(basename "$0")
 dir=/usr/local/bin
 methodSwitch() {
     case $1 in
@@ -54,7 +53,7 @@ methodSwitch() {
         abort)
             exit;;
         *)
-            echo "  I'm downloading Telegram... Download speed may vary depending by your connection speed.\n  DO NOT DELETE ANY NEW FILE ON DESKTOP. Press CTRL-Z to abort.\n"
+            echo "  I'm downloading Telegram... Download speed may vary depending by your connection speed.\n DO NOT DELETE ANY NEW FILE in the script path. Press CTRL-Z to abort.\n"
             echo "\n  Please, stand behind the yellow line."
             #using /bin/echo to not use Dash's echo command. This lets me style the text
             /bin/echo -e "\e[93m. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\e[0m"
@@ -143,7 +142,7 @@ esac
         fi
         # Valid folder control (for /usr/local/bin)
         if [ ! -d $dir ]; then
-            echo "There's a problem with the folder: /usr/local/bin/ seems not to exists. Your application will be located in /opt/"
+            echo "Telegram will be located in /opt/"
             dir=/opt
         fi
         # removing older telegram folder in $dir if existing.
