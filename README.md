@@ -5,16 +5,15 @@ A simple Telegram installer for linux.
 ####Description
 
 At the current version (0.9.49), Telegram provides only two executable files (Telegram itself and its updater) and no installer like many other linux softwares. So, I decided to create this installer in bash for Linux to download, extract and find Telegram (if you already downloaded it).
-This script offers five ways to install Telegram: auto-detection, manual-detection, file, folder, download.
+This script offers four ways to install Telegram: auto-detection, manual-detection, folder detection, download.
 
 #####Auto-detection ( **--auto** | **-a** )
-Auto-detection will try automatically to retrieve Telegram (in order) from _**script argument**_, _**telegram.tar.xz archive**_, _**extracted folder**_ , _**download from the web**_.
+Auto-detection will try automatically to retrieve Telegram (in order) from _**script argument**_, _**extracted folder**_ , _**download from the web**_.
 
 The _script argument_ is an archive (.tar.xz) placed somewhere in your pc. To start with it, you will need to start the script like this:
 
         ./installTelegram.sh --auto <path-to-archive>.tar.xz
 
-_**TEMPORARY DISABLED**_ The _telegram.tar.xz archive_ is an archive already downloaded by telegram by the website of via the script.
 The _extracted folder_ is a folder extracted from telegram.tar.xz, called **telegram** or **Telegram**.
 _download from the web_, will download telegram from the official website.
 
@@ -23,7 +22,7 @@ Manual-detection will lists you all the available ways to install Telegram (like
 
         ./installTelegram.sh --manual
 
-This parameter let you also to install Telegram via _**snap**_, the newer Ubuntu _packet manager_, unavailable way in auto-detection mode. This voice will appear only if snap is installed.
+This parameter let you also to install Telegram via _**snap**_, the newer Ubuntu _packet manager_. This voice will appear only if snap is installed.
 As in auto-detection mode, _script argument_ is an archive (tar.xz) placed somewhere in your pc. To start with it, you will need to start the script like this:
 
         ./installTelegram.sh --manual <path-to-archive>.tar.xz
