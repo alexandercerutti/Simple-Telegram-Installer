@@ -58,7 +58,7 @@ methodSwitch() {
             #using /bin/echo to not use Dash's echo command. This lets me style the text
             /bin/echo -e "\e[93m. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\e[0m"
             /bin/echo -e "\e[103m\t\t\t\t\t\t\t\t\t\t \e[0m \n"
-            sudo wget --progress=bar http://tdesktop.com/linux -O telegram.tar.xz --no-check-certificate
+            sudo wget --progress=bar https://telegram.org/dl/desktop/linux -O telegram.tar.xz --no-check-certificate
             tar xfJ telegram.tar.xz
             FILE="telegram.tar.xz"
         ;;
